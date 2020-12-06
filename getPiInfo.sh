@@ -15,3 +15,5 @@ echo "--------------------Memory split CPU&GPU-------------"
 vcgencmd get_mem arm && vcgencmd get_mem gpu
 echo "-------------------System memory---------------------"
 free -m -h
+echo "-------------------Storage in details---------------------"
+df -h
