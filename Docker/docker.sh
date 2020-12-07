@@ -9,11 +9,11 @@ sudo curl https://download.docker.com/linux/raspbian/gpg
 sudo apt-get install apt-transport-https ca-certificates software-properties-common -y
 sudo nano /etc/apt/sources.list -> deb https://download.docker.com/linux/raspbian/ stretch stable
 #adding firewall rules
-sudo ufw default deny incoming
-sudo ufw default allow outgoing
+sudo ufw default deny incoming && sudo ufw default allow outgoing && sudo ufw enable
 #opening port 22 and 8080
 sudo ufw allow 22
 sudo ufw allow 8080/tcp
+sudo service ufw restart
 COMMENT1
 sudo apt install libffi-dev libssl-dev python3 python3-pip && sudo pip3 install docker-compose -y
 rm -rf docker
